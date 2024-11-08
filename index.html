@@ -1,0 +1,93 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+
+<head>
+    <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>calculadora IMC</title>
+</head>
+
+<body>
+
+    <nav id="navbar">
+        <ul type="square">
+            <li><a href="#home">Inicio</a></li>
+            <li><a href="#Calcular">Calcular o IMC</a></li>
+           
+    </nav>
+
+    <section id="home" >
+    <h1>Índice de Massa Corporal</h1>
+</section>
+<!-- <section id="home" > -->
+
+    <h2>Cálculo IMC</h2>
+<div class="container">
+<img src="https://media.istockphoto.com/photos/hands-measuring-picture-id171345979?k=6&m=171345979&s=612x612&w=0&h=YByR-gmO9C6pSj968kld-bcNtaGZLUQ78a_mik_YwbM=" alt="">
+
+    <p>IMC é a sigla para Índice de Massa Corpórea, parâmetro adotado pela Organização Mundial de Saúde
+        para calcular o peso ideal de cada pessoa.
+
+        O índice é calculado da seguinte maneira: divide-se o peso do paciente pela sua altura elevada ao quadrado.
+        Diz-se que o indivíduo tem peso normal quando o resultado do IMC está entre 18,5 e 24,9.
+
+        Quer descobrir seu IMC? Insira seu peso e sua altura nos campos abaixo e compare com os índices da tabela.
+        Importante: siga os exemplos e use pontos como separadores.</p>
+    </div>
+<!-- </section> -->
+    <!-- <form action="#"> -->
+  
+        <section id="Calcular">
+
+        <div class="mexer">
+            <label for="altura"> Altura :</label>
+            <input type="numbre" name="altura" id="altura">
+
+
+            <label for="peso"> Peso (kg):</label>
+            <input type="numbre" name="peso" id="peso">
+
+            <p class="mexer1">Seu índise de massa corporal é: <span id="resultado"></span></p>
+        </div>
+  
+    <button onclick="calcImc()"> Calcular IMC </button>
+</section>
+
+
+
+
+
+
+    <script>
+
+        function calcImc() {
+
+            const altura = parseFloat(document.getElementById("altura").value);
+
+            const peso = parseFloat(document.getElementById("peso").value);
+
+            const resultado = peso / (altura ** 2);
+
+            document.getElementById("resultado").textContent = resultado.toFixed(2);
+        }
+
+
+
+
+    </script>
+
+
+<footer>
+  <h4>  Desenvolvido por Luis Henrique e eu acho sobre a classe social-23/10/2024</h4>
+    
+</footer>
+
+
+
+
+
+
+</body>
+
+</html>
